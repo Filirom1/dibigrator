@@ -1,0 +1,21 @@
+{
+  "name": "dibigrator",
+  "version": "0.1.0",
+  "description": "A database migration tools using plain SQL scripts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test -R spec --bail"
+  },
+  "repository": "",
+  "author": "Filirom1 <Filirom1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "semver": "~1.1.2",
+    "async": "~0.1.22",
+    "pg": "~0.11.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.8.1",
+    "chai": "~1.4.2"
+  }
+}
