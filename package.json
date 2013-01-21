@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha test -R spec --bail"
   },
-  "repository": "",
+  "repository": "https://github.com/Filirom1/dibigrator.git",
   "author": "Filirom1 <Filirom1@gmail.com>",
   "license": "MIT",
   "dependencies": {

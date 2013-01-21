@@ -39,7 +39,7 @@ Write some migrations scripts in a folder. Take a look at test/fixture:
 
 Then plug your postgresql connection to dibigrator, and call the migrate function.
 
-    var client = new pg.Client("tcp://postgres:1234@localhost/dibigrator");
+    var client = new pg.Client("tcp://USER:PASSWORD@localhost/postgres");
     client.connect();
     var dibigrator = require('dibigrator').postgres(client, '/path/to/my/migration/files');
     dibigrator.migrate('0.2.1', function(err, migrations){
