@@ -41,7 +41,7 @@ Then plug your postgresql connection to dibigrator, and call the migrate functio
 
     var client = new pg.Client("tcp://USER:PASSWORD@localhost/postgres");
     client.connect();
-    var dibigrator = require('dibigrator').postgres(client, '/path/to/my/migration/files');
+    var dibigrator = require('dibigrator').postgresql(client, '/path/to/my/migration/files');
     dibigrator.migrate('0.2.1', function(err, migrations){
       if(err) return console.error(err);
       ...
