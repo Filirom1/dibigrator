@@ -1,4 +1,5 @@
 # dibigrator
+[![Build Status](https://travis-ci.org/openruko/dibigrator.png)](https://travis-ci.org/openruko/dibigrator)
 
 A database migration tools using plain SQL scripts and [semver](https://npmjs.org/doc/semver.html);
 
