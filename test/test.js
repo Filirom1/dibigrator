@@ -75,6 +75,28 @@ describe('dibigrator', function(){
       });
     });
 
+    it('should rollback when failing to migrate to 6.6.6', function(done){
+      dibigrator.migrate('6.6.6', function(err, migrations) {
+        assert.isNotNull(err);
+        assert.isUndefined(migrations);
+        dibigrator.getCurrentVersion(function(err, version){
+          if (err) return done(err);
+          assert.equal(version, '0.2.0');
+          client.query('SELECT * FROM uuser', function(err, result){
+            if(err) return done(err);
+            var users = result.rows;
+            var user = users.filter(function(user){
+              return /Foo.Bar@gmail.com/.test(user.email);
+            })[0];
+
+            // Foo Bar in camel case is 0.2.0 format
+            assert.equal('Foo Bar', user.name);
+            done();
+          });
+        });
+      });
+    });
+
     it('should migrate down to 0.1.0', function(done){
       dibigrator.migrate('0.1.0', function(err, migrations) {
         if (err) return done(err);

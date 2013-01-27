@@ -50,6 +50,8 @@ Then plug your postgresql connection to dibigrator, and call the migrate functio
 
 Migrations scripts will be executed ;)
 
+Only works with postgresql by now, but is would easy to make it works with other databases (Take a look at lib/drivers).
+
 ## Test
 
     $ export DATABASE_URL="tcp://USER:PASSWORD@localhost/postgres"
