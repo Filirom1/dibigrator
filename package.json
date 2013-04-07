@@ -4,7 +4,7 @@
   "description": "A database migration tools using plain SQL scripts.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test -R spec --bail"
+    "test": "PATH=./node_modules/.bin/:$PATH mocha test -R spec --bail"
   },
   "repository": "https://github.com/Filirom1/dibigrator.git",
   "author": "Filirom1 <Filirom1@gmail.com>",
